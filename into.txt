@@ -1,0 +1,16 @@
+
+
+
+
+
+post--> http://localhost:4242/user/login
+    --> http://localhost:4242/note/create
+            {
+                "title" : "anything",
+                 "body" : "first note"
+            }
+            o/p:-
+            {
+                "message": "Note Created successfully",
+                "status": 1
+            }
