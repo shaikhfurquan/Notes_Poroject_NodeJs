@@ -20,10 +20,16 @@ userRouter.post('/register', async (req, res) => {
         try {
             let user = new userModel({ name, email, password: hash });
             await user.save()
-            res.send({ message: "User Created", status: 0 })
+            res.send({ 
+                message: "User Created", 
+                status: 0 
+            })
         } catch (error) {
             console.log(err);
-            res.send({ message: error.message, status: 0 })
+            res.send({ 
+                message: error.message, 
+                status: 0 
+            })
         }
     })
 })

@@ -1,16 +1,50 @@
 
-
-
-
-
-post--> http://localhost:4242/user/login
-    --> http://localhost:4242/note/create
+get-->      
+          http://localhost:4242/note/create
             {
                 "title" : "anything",
-                 "body" : "first note"
+                "body" : "first note"
             }
             o/p:-
             {
                 "message": "Note Created successfully",
                 "status": 1
             }
+      
+
+post-->     
+            http://localhost:4242/user/login
+
+            {
+                "email" : "khan@gmail.com",
+                "password" : "khan@123"
+            }
+
+            http://localhost:4242/user/register
+            {
+              "name" : "shaikh",
+              "email" : "shaikh@gmail.com",
+              "password" : "shaikh@123"
+            }
+
+
+          http://localhost:4242/note/create
+          {
+          "title" : "shaikh first notes",
+          "body" : "whaterver"
+          }
+
+patch:-
+      http://localhost:4242/note
+      {
+       "title" : "title change"
+      }
+
+delete:-
+      http://localhost:4242/note
+      {
+      "title" : "title change"
+      }
+
+
+
